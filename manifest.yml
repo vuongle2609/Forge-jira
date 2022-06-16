@@ -2,10 +2,15 @@ modules:
   jira:issuePanel:
     - key: issues-manager-hello-world-panel
       # function: main
+      resolver:
+        function: testF
       resource: vite
       viewportSize: large
       title: issues-manager
       icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: testF
+      handler: index.handler
 app:
   id: ari:cloud:ecosystem::app/65987d5c-c338-4df9-8353-42e807664c20
 resources: # list below the static resources entries for your app
